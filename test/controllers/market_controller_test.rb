@@ -12,7 +12,6 @@ class MarketControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show with error" do
-    market = markets(:two)
     get market_url(1)
     assert_response :missing
   end
