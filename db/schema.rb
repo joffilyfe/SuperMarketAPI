@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202192207) do
+ActiveRecord::Schema.define(version: 20170202193520) do
 
   create_table "markets", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20170202192207) do
     t.float    "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "product_markets", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "market_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["market_id"], name: "index_product_markets_on_market_id"
+    t.index ["product_id"], name: "index_product_markets_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
