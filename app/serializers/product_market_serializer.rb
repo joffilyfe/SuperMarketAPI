@@ -1,3 +1,4 @@
 class ProductMarketSerializer  < ActiveModel::Serializer
-  attributes :id, :market_id, :value, :updated_at
+  type 'product'
+  attributes :id, :product_id, :market_id, :value, :updated_at
 end
