@@ -1,0 +1,10 @@
+first_user:
+  id: 1
+  name: 'Test User'
+  password_digest: '123456'
+
+
+second_user:
+  id: 2
+  name: 'A single user'
+  password_digest: '123456'
